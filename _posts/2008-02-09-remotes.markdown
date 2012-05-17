@@ -88,7 +88,9 @@ By default, push will only send the ref you specify.  To push a single tag you c
 
 ### Deleting a remote branch or tag
 
-This command is a bit arcane at first glance... `git push REMOTENAME :BRANCHNAME`.  If you look at the advanced push syntax above it should make a bit more sense.  You are literally telling git "push _nothing_ into BRANCHNAME on REMOTENAME".
+Prior to git 1.7.0 you had to use the following arcane command: `git push REMOTENAME :BRANCHNAME`.  If you look at the advanced push syntax above it should make a bit more sense.  You are literally telling git "push _nothing_ into BRANCHNAME on REMOTENAME".
+
+With current versions use `git push REMOTENAME --delete BRANCHNAME` which is syntactic sugar for the above command, but with a clearer intent.
 
 Links
 -----
